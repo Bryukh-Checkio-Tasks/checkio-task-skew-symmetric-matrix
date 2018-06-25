@@ -24,10 +24,24 @@
 </p>
 
 <div class="for_info_only">
-
-    <p>
-        <strong>Example:</strong>
-    </p>
+<p>
+<strong>Example:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">symmetric([
+    [ 0,  1,  2],
+    [-1,  0,  1],
+    [-2, -1,  0]]) == true
+checkio([
+    [ 0,  1, 2],
+    [-1,  1, 1],
+    [-2, -1, 0]]) == false
+checkio([
+    [ 0,  1, 2],
+    [-1,  0, 1],
+    [-3, -1, 0]]) == false
+</pre>
+{% else %}
 <pre class="brush: python">checkio([
     [ 0,  1,  2],
     [-1,  0,  1],
@@ -39,7 +53,9 @@ checkio([
 checkio([
     [ 0,  1, 2],
     [-1,  0, 1],
-    [-3, -1, 0]]) == False</pre>
+    [-3, -1, 0]]) == False
+</pre>
+{% endif %}
 </div>
 
 
